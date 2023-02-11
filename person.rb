@@ -19,11 +19,11 @@ class Person < Nameable
     @name
   end
 
-  private :of_age?
-
   def of_age?
     @age >= 18
   end
+
+  private :of_age?
 
   def rent(date, book)
     Rental.new(date, book, self)
